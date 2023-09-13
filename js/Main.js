@@ -59,8 +59,8 @@ contenedoresArmar.forEach((contenedorArmar) =>{
             return
         }
 
-        console.log(infoContenedor);
-        console.log(botonArrastrable.id);
+        // console.log(infoContenedor);
+        // console.log(botonArrastrable.id);
 
         if(infoContenedor == botonArrastrable.id){
             contenedorArmar.appendChild(botonArrastrable);
@@ -69,21 +69,26 @@ contenedoresArmar.forEach((contenedorArmar) =>{
         }else{
             return
         }
+        let rompecabezas2 = document.querySelector(".rompecabezas2");
 
-        ganar();
+        let botones = null;
+
+        botones = rompecabezas2.childElementCount;
+
+
+        console.log("botones dentro del contenedor " + botones);
+    
+        if(botones == 9){
+            alert("gano");
+        }
+
+        // ganar();
 
     });
 });
 
 // FALTA FUNCION PARA INDICAR QUE GANO
-
-function ganar(){
-    let rompecabezas2 = document.querySelector('.rompecabezas2');
-
-
-
-};
-
+// Verificar que si en el contenedor rompecabezas 2 hay 9 botones 
 
 
 
